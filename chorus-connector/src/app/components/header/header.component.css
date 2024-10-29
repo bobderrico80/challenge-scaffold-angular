@@ -1,0 +1,13 @@
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+ol {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin-left: 1rem;
+}

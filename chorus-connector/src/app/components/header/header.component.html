@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+  <header>
+    <h1>Chorus Connector</h1>
+  </header>
+
+  <nav>
+    <ol>
+      <ng-container *ngIf="!(authenticated$ | async); else authenticatedLinks">
+        <li>
+          <a mat-button [routerLink]="['login']">Login</a>
+        </li>
+      </ng-container>
+      <ng-template #authenticatedLinks>
+        <li>
+          <a mat-button [routerLink]="['admin']">Admin</a>
+        </li>
+        <li>
+          <a mat-button [routerLink]="['logout']">Logout</a>
+        </li>
+      </ng-template>
+    </ol>
+  </nav>
+</mat-toolbar>
