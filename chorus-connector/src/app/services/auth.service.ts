@@ -3,12 +3,15 @@ import { BehaviorSubject, of, throwError } from 'rxjs';
 
 const DEFAULT_USERNAME = 'test-user';
 const DEFAULT_PASSWORD = 'gala2028';
+const DEFAULT_AUTH_STATE = false;
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  private readonly authenticated$ = new BehaviorSubject<boolean>(false);
+  private readonly authenticated$ = new BehaviorSubject<boolean>(
+    DEFAULT_AUTH_STATE
+  );
 
   isAuthenticated() {
     return this.authenticated$;

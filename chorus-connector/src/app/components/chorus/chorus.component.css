@@ -12,23 +12,6 @@
   justify-content: flex-start;
 }
 
-h3 {
-  font-weight: bold;
-}
-
 li {
   list-style: none;
-}
-
-.mat-mdc-card {
-  width: 300px;
-  height: 250px;
-}
-
-dt {
-  font-weight: bold;
-}
-
-dd {
-  margin: 0 0 1rem 0;
 }

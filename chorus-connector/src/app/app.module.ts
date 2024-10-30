@@ -8,8 +8,11 @@ import { LoginComponent } from './components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { LogoutComponent } from './components/logout/logout.component';
-import { MaterialModule } from './material/material.module';
+import { MaterialModule } from './modules/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ChorusCardComponent } from './components/chorus-card/chorus-card.component';
+import { EditChorusModalComponent } from './components/edit-chorus-modal/edit-chorus-modal.component';
+import { TextInputFieldComponent } from './components/text-input-field/text-input-field.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     HeaderComponent,
     LogoutComponent,
+    ChorusCardComponent,
+    EditChorusModalComponent,
+    TextInputFieldComponent,
   ],
   imports: [
     BrowserModule,

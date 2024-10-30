@@ -1,8 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ChorusComponent } from './chorus.component';
-import { MaterialModule } from '../../material/material.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { CommonTestModule } from '../../modules/common-test.module';
+import { MockComponent } from 'ng-mocks';
+import { ChorusCardComponent } from '../chorus-card/chorus-card.component';
 
 describe('ChorusComponent', () => {
   let component: ChorusComponent;
@@ -10,8 +11,8 @@ describe('ChorusComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ChorusComponent],
-      imports: [MaterialModule, ReactiveFormsModule],
+      declarations: [ChorusComponent, MockComponent(ChorusCardComponent)],
+      imports: [CommonTestModule],
     });
     fixture = TestBed.createComponent(ChorusComponent);
     component = fixture.componentInstance;

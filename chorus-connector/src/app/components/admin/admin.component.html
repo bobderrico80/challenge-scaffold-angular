@@ -1,1 +1,20 @@
-<p>admin works!</p>
+<section>
+  <h2>Chorus Administration</h2>
+
+  <div class="button-container">
+    <button mat-raised-button color="primary" (click)="addChorus()">
+      Add New Chorus
+    </button>
+  </div>
+
+  <ul class="card-container">
+    <li *ngFor="let chorus of choruses$ | async">
+      <app-chorus-card
+        [chorus]="chorus"
+        [admin]="true"
+        (edit)="editChorus($event)"
+        (delete)="deleteChorus($event)"
+      ></app-chorus-card>
+    </li>
+  </ul>
+</section>

@@ -13,31 +13,7 @@
 
   <ul class="card-container">
     <li *ngFor="let chorus of filteredChoruses$ | async">
-      <section class="card">
-        <mat-card>
-          <mat-card-header>
-            <h3>
-              {{ chorus.name }}
-            </h3>
-          </mat-card-header>
-
-          <mat-card-content>
-            {{ chorus.description }}
-
-            <dl>
-              <dt>Location:</dt>
-              <dd>{{ chorus.location.city }}, {{ chorus.location.state }}</dd>
-
-              <dt>Contact Email:</dt>
-              <dd>
-                <a [href]="'mailto:' + chorus.contactEmail">{{
-                  chorus.contactEmail
-                }}</a>
-              </dd>
-            </dl>
-          </mat-card-content>
-        </mat-card>
-      </section>
+      <app-chorus-card [chorus]="chorus"></app-chorus-card>
     </li>
   </ul>
 </section>

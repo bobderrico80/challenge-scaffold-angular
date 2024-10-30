@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { MockComponent } from 'ng-mocks';
 import { HeaderComponent } from './components/header/header.component';
+import { CommonTestModule } from './modules/common-test.module';
 
 describe('AppComponent', () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
+      imports: [CommonTestModule],
       declarations: [AppComponent, MockComponent(HeaderComponent)],
     })
   );
