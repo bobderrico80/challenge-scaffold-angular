@@ -1,1 +1,27 @@
-<p>login works!</p>
+<form [formGroup]="form" (ngSubmit)="submitForm()" class="login-form">
+  <h2>Admin Login</h2>
+
+  <mat-form-field>
+    <mat-label>Username</mat-label>
+    <input matInput [formControl]="form.controls.username" />
+    <mat-error *ngIf="form.controls.username.invalid"
+      >Username is required</mat-error
+    >
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input type="password" matInput [formControl]="form.controls.password" />
+    <mat-error *ngIf="form.controls.password.invalid"
+      >Password is required</mat-error
+    >
+  </mat-form-field>
+
+  <div class="button-container">
+    <button mat-raised-button color="primary" type="submit">Login</button>
+  </div>
+
+  <p *ngIf="loginError" aria-live="polite" class="login-error">
+    The username and/or password provided are not correct
+  </p>
+</form>

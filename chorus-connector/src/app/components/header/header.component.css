@@ -3,6 +3,11 @@
   justify-content: space-between;
 }
 
+h1 a {
+  color: white;
+  text-decoration: none;
+}
+
 ol {
   display: flex;
   list-style: none;
