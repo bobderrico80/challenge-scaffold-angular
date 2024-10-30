@@ -1,0 +1,30 @@
+<section class="card">
+  <mat-card [class]="{ admin: admin }">
+    <mat-card-header>
+      <h3>
+        {{ chorus.name }}
+      </h3>
+    </mat-card-header>
+
+    <mat-card-content>
+      {{ chorus.description }}
+
+      <dl>
+        <dt>Location:</dt>
+        <dd>{{ chorus.location.city }}, {{ chorus.location.state }}</dd>
+
+        <dt>Contact Email:</dt>
+        <dd>
+          <a [href]="'mailto:' + chorus.contactEmail">{{
+            chorus.contactEmail
+          }}</a>
+        </dd>
+      </dl>
+    </mat-card-content>
+
+    <mat-card-actions *ngIf="admin">
+      <button mat-raised-button (click)="editClick()">Edit</button>
+      <button mat-raised-button (click)="deleteClick()">Delete</button>
+    </mat-card-actions>
+  </mat-card>
+</section>

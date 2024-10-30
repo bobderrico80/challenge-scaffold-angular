@@ -1,0 +1,8 @@
+form {
+  margin: 2rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}

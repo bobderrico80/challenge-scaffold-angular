@@ -1,0 +1,5 @@
+<mat-form-field>
+  <mat-label>{{ label }}</mat-label>
+  <input [type]="type" matInput [formControl]="control" />
+  <mat-error *ngIf="control.invalid">Field is required</mat-error>
+</mat-form-field>

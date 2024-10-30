@@ -1,0 +1,35 @@
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+  <h2>{{ modalTitle }}</h2>
+
+  <app-text-input-field
+    label="Name"
+    [control]="form.controls.name"
+  ></app-text-input-field>
+
+  <app-text-input-field
+    label="Description"
+    [control]="form.controls.description"
+  ></app-text-input-field>
+
+  <app-text-input-field
+    label="Contact Email"
+    [control]="form.controls.contactEmail"
+  ></app-text-input-field>
+
+  <app-text-input-field
+    label="City"
+    [control]="form.controls.city"
+  ></app-text-input-field>
+
+  <app-text-input-field
+    label="State"
+    [control]="form.controls.state"
+  ></app-text-input-field>
+
+  <div class="button-container">
+    <button type="button" mat-raised-button (click)="cancel()">Cancel</button>
+    <button type="submit" mat-raised-button color="primary">
+      {{ saveButtonText }}
+    </button>
+  </div>
+</form>
