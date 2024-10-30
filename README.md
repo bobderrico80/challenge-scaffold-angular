@@ -34,4 +34,23 @@ cd chorus-connector
 npm install
 ng serve
 ```
-Update this README with anything we should know about your solution (including spin-up and testing instructions, if relevant).
+
+The default route is the main display of choruses. To authenticate, click the 'Login' link in the header. The default username & password are:
+
+```
+test-user
+gala2028
+```
+
+After successful login, you'll be taken to the administration page, with options to add, edit, and delete existing choruses.
+
+To return to main chorus page, click the heading in the top-left of the header. To logout of administration functions, click 'Logout' in the header.
+
+Implementation notes:
+- Functionality-wise, this has been implemented per the spec defined above. Though I played a bit loose with the "search for choruses near me" requirement by implementing a city/state filter (I was originally looking into using the location API, but that deemed too complex for this exercise).
+- Testing is not as complete as I'd like. I did fully test the Auth and Chorus services, which house the core business logic of the application. All other components have at least one "should create" test that passes, making it easy for tests to be added given more time.
+- Input validation is very basic. All fields just have a 'required' validator, and the validation error message is hard-coded to be the same for all fields. Given more time, I'd make this more sophisticated by mapping validators to specific messaging, and include email validation on the Contact Email field. I also left the State field just a freeform input. Given more time, I'd use a `<select>` for this with a list of US state abbreviations as options.
+- Accessibility was considered while implementing all components, though I did not do any testing of accessibility
+- For a UI library, I went with Angular Material to quickly get a nice-enough UI going with a framework I was familiar with.
+
+Looking forward to discussing this exercise further!
